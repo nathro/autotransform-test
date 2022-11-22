@@ -1,10 +1,10 @@
 {
-    "Black Format": {
-        "type": "file",
-        "target": "autotransform/schemas/black_format.json"
-    },
-    "Prettier":  {
-        "type": "file",
-        "target": "autotransform/schemas/prettier.json"
-    }
+  "Black Format": {
+    "type": "file",
+    "target": "autotransform/schemas/black_format.json"
+  },
+  "Prettier": {
+    "type": "file",
+    "target": "autotransform/schemas/prettier.json"
+  }
 }
