@@ -16,7 +16,7 @@
             "schema_name": "Prettier",
             "schedule": {
                 "repeats": "daily",
-                "hour_of_day": 0
+                "hour_of_day": 1
             }
         }
     ]
