@@ -1,0 +1,10 @@
+{
+    "python.envFile": "C:/repos/autotransform/.vscode/.env",
+    "python.formatting.provider": "black",
+    "python.formatting.blackArgs": [
+        "--line-length",
+        "100",
+    ],
+    "editor.formatOnSave": false,
+    "autoDocstring.docstringFormat": "google",
+}
