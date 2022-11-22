@@ -1,6 +1,7 @@
 name: Schedule AutoTransform
 
 on:
+  workflow_dispath:
   schedule:
     - cron: '0 * * * *'
 
