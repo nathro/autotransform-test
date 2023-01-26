@@ -35,6 +35,19 @@
             "name": "conditional",
             "actions": [
                 {
+                    "name": "abandon"
+                }
+            ],
+            "condition": {
+                "name": "created_ago",
+                "comparison": "greater_than_or_equal",
+                "value": 79200
+            }
+        },
+        {
+            "name": "conditional",
+            "actions": [
+                {
                     "name": "update"
                 }
             ],
