@@ -1,4 +1,4 @@
-AutoTransform==1.1.0a8
+AutoTransform==1.1.0a9
 
 # Formatting
 black>=22.3.0
