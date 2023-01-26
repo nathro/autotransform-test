@@ -6,7 +6,7 @@ on:
 jobs:
   manage-autotransform:
     runs-on: ubuntu-latest
-    name: Manage AutoTransform
+    name: Manage
     steps:
     - uses: actions/checkout@v3
       with:
@@ -17,7 +17,7 @@ jobs:
         python-version: "3.10"
     - name: Update pip
       run: pip install --upgrade pip
-    - name: Install requirements
+    - name: Install Dependencies
       run: pip install -r autotransform/requirements.txt
     - name: Manage AutoTransform
       run: autotransform manage --verbose

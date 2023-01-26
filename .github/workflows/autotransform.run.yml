@@ -15,22 +15,32 @@ on:
         description: "A filter to add to the schema"
         type: string
         required: false
+      target_repo_name:
+        description: "The name of the repo to checkout"
+        type: string
+        required: false
+      target_repo_ref:
+        description: "The ref of the repo to checkout"
+        type: string
+        required: false
 
 jobs:
   run-autotransform:
     runs-on: ubuntu-latest
-    name: Run AutoTransform
+    name: Run
     steps:
     - uses: actions/checkout@v3
       with:
         token: ${{ secrets.AUTO_TRANSFORM_BOT_GITHUB_TOKEN }}
+        repository: ${{ github.event.inputs.target_repo_name}}
+        ref: ${{ github.event.inputs.target_repo_ref}}
     - name: Set up Python 3.10
       uses: actions/setup-python@v3
       with:
         python-version: "3.10"
     - name: Update pip
       run: pip install --upgrade pip
-    - name: Install requirements
+    - name: Install Dependencies
       run: pip install -r autotransform/requirements.txt
     - name: Set up options
       run: |
