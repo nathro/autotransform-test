@@ -1,61 +1,61 @@
 {
-    "repo": {
-        "name": "github",
-        "base_branch": "main",
-        "full_github_name": "nathro/autotransform-test"
-    },
-    "steps": [
+  "repo": {
+    "name": "github",
+    "base_branch": "main",
+    "full_github_name": "nathro/autotransform-test"
+  },
+  "steps": [
+    {
+      "name": "conditional",
+      "actions": [
         {
-            "name": "conditional",
-            "actions": [
-                {
-                    "name": "merge"
-                }
-            ],
-            "condition": {
-                "name": "review_state",
-                "comparison": "equal",
-                "value": "approved"
-            }
-        },
-        {
-            "name": "conditional",
-            "actions": [
-                {
-                    "name": "abandon"
-                }
-            ],
-            "condition": {
-                "name": "review_state",
-                "comparison": "equal",
-                "value": "changes_requested"
-            }
-        },
-        {
-            "name": "conditional",
-            "actions": [
-                {
-                    "name": "abandon"
-                }
-            ],
-            "condition": {
-                "name": "created_ago",
-                "comparison": "greater_than_or_equal",
-                "value": 79200
-            }
-        },
-        {
-            "name": "conditional",
-            "actions": [
-                {
-                    "name": "update"
-                }
-            ],
-            "condition": {
-                "name": "updated_ago",
-                "comparison": "greater_than_or_equal",
-                "value": 1
-            }
+          "name": "merge"
         }
-    ]
+      ],
+      "condition": {
+        "name": "review_state",
+        "comparison": "equal",
+        "value": "approved"
+      }
+    },
+    {
+      "name": "conditional",
+      "actions": [
+        {
+          "name": "abandon"
+        }
+      ],
+      "condition": {
+        "name": "review_state",
+        "comparison": "equal",
+        "value": "changes_requested"
+      }
+    },
+    {
+      "name": "conditional",
+      "actions": [
+        {
+          "name": "abandon"
+        }
+      ],
+      "condition": {
+        "name": "created_ago",
+        "comparison": "greater_than_or_equal",
+        "value": 79200
+      }
+    },
+    {
+      "name": "conditional",
+      "actions": [
+        {
+          "name": "update"
+        }
+      ],
+      "condition": {
+        "name": "updated_ago",
+        "comparison": "greater_than_or_equal",
+        "value": 1
+      }
+    }
+  ]
 }
