@@ -9,14 +9,14 @@
             "schema_name": "Black Format",
             "schedule": {
                 "repeats": "daily",
-                "hour_of_day": 16
+                "hour_of_day": 7
             }
         },
         {
             "schema_name": "Prettier",
             "schedule": {
                 "repeats": "daily",
-                "hour_of_day": 17
+                "hour_of_day": 1
             }
         }
     ]
