@@ -1,23 +1,20 @@
 {
-    "base_time": 1653289200,
-    "excluded_days": [
-        5,
-        6
-    ],
-    "schemas": [
-        {
-            "schema_name": "Black Format",
-            "schedule": {
-                "repeats": "daily",
-                "hour_of_day": 7
-            }
-        },
-        {
-            "schema_name": "Prettier",
-            "schedule": {
-                "repeats": "daily",
-                "hour_of_day": 1
-            }
-        }
-    ]
+  "base_time": 1653289200,
+  "excluded_days": [5, 6],
+  "schemas": [
+    {
+      "schema_name": "Black Format",
+      "schedule": {
+        "repeats": "daily",
+        "hour_of_day": 7
+      }
+    },
+    {
+      "schema_name": "Prettier",
+      "schedule": {
+        "repeats": "daily",
+        "hour_of_day": 1
+      }
+    }
+  ]
 }
