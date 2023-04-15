@@ -1,47 +1,41 @@
 {
-    "config": {
-        "schema_name": "Prettier",
-        "owners": [
-            "nathro"
-        ]
+  "config": {
+    "schema_name": "Prettier",
+    "owners": ["nathro"]
+  },
+  "input": {
+    "name": "directory",
+    "path": "."
+  },
+  "filters": [
+    {
+      "name": "regex",
+      "pattern": ".*\\.json$"
     },
-    "input": {
-        "name": "directory",
-        "path": "."
-    },
-    "filters": [
-        {
-            "name": "regex",
-            "pattern": ".*\\.json$"
-        },
-        {
-            "name": "regex",
-            "pattern": "node_modules\/.*|package(?:-lock)?.json",
-            "inverted": true
-        }
-    ],
-    "batcher": {
-        "name": "single",
-        "title": "Format all JSON file",
-        "metadata": {
-            "body": "Run npx prettier -w on all JSON files",
-            "reviewers": ["nathro"]
-        }
-    },
-    "transformer": {
-        "name": "script",
-        "script": "npx",
-        "args": [
-            "prettier",
-            "-w",
-            "<<KEY>>"
-        ],
-        "timeout": 300,
-        "per_item": true
-    },
-    "repo": {
-        "name": "github",
-        "base_branch": "main",
-        "full_github_name": "nathro/autotransform-test"
+    {
+      "name": "regex",
+      "pattern": "node_modules/.*|package(?:-lock)?.json",
+      "inverted": true
     }
+  ],
+  "batcher": {
+    "name": "single",
+    "title": "Format all JSON file",
+    "metadata": {
+      "body": "Run npx prettier -w on all JSON files",
+      "reviewers": ["nathro"]
+    }
+  },
+  "transformer": {
+    "name": "script",
+    "script": "npx",
+    "args": ["prettier", "-w", "<<KEY>>"],
+    "timeout": 300,
+    "per_item": true
+  },
+  "repo": {
+    "name": "github",
+    "base_branch": "main",
+    "full_github_name": "nathro/autotransform-test"
+  }
 }
